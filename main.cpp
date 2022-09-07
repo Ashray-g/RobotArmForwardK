@@ -9,7 +9,8 @@ int main() {
 
     std::vector<std::vector<float>> DHTable = {{1, 0, 0, 0},
                                                {1, 0, 0, 3.14/4},
-                                               {1, 0, 0, 3.14/4}};
+                                               {1, 0, 0, 3.14/4},
+                                               {1, 0, 0, 0}};
 
     std::vector<MatrixXd> links = {};
 
@@ -32,7 +33,7 @@ int main() {
         mult = mult * links[i];
     }
 
-    std::cout << "x: " << mult(0, 3) <<  "   y: " << mult(1, 3) << "   z: " << mult(2, 3);
+    std::cout << "x: " << mult(0, 3) <<  "   y: " << mult(1, 3) << "   z: " << mult(2, 3) << "\n\n";
 
 
     return 0;
