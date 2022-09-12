@@ -1,18 +1,21 @@
 #include <iostream>
 #include <Eigen/Dense>
 #include <vector>
+#include "MathUtils.h"
+
+using namespace std;
 
 
 typedef Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> MatrixXd;
 
 int main() {
 
-    std::vector<std::vector<float>> DHTable = {{1, 0, 0, 0},
-                                               {1, 0, 0, 3.14/4},
-                                               {1, 0, 0, 3.14/4},
-                                               {1, 0, 0, 0}};
+    vector<vector<float>> DHTable = {{1, 0, 0, 0},
+                                     {1, 0, 0, 3.14/6},
+                                     {1, 0, 0, 3.14/6},
+                                     {1, 0, 0, 3.14/6}};
 
-    std::vector<MatrixXd> links = {};
+    vector<MatrixXd> links = {};
 
 
     for(int i = 0;i<DHTable.size();i++){
@@ -31,12 +34,15 @@ int main() {
 
     for(int i = 1;i<DHTable.size();i++){
         mult = mult * links[i];
+
+        cout << "Joint " << i << " location: \n" << "x: " << mult(0, 3) <<  "   y: " << mult(1, 3) << "   z: " << mult(2, 3) << "\n";
+
+        MathUtils mathUtil;
+        vector<double> rotation = mathUtil.rotationMatrixToEulerAngles(mult);
+
+        cout << rotation[0] << " " << rotation[1] << " " << rotation[2] << "\n\n";
     }
-
-    std::cout << "x: " << mult(0, 3) <<  "   y: " << mult(1, 3) << "   z: " << mult(2, 3) << "\n\n";
-
 
     return 0;
 }
-
 
