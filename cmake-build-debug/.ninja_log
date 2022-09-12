@@ -1,12 +1,7 @@
 # ninja log v5
-3	2572	1662968278894417095	CMakeFiles/untitled.dir/main.cpp.o	79eeac053b631f2e
-2572	2656	1662968278991609953	untitled	d470d88690c2487b
-2	202	1662486619689865589	CMakeFiles/untitled.dir/Point.cpp.o	adfb424eb9ef238d
-3	70	1662950316248485513	CMakeFiles/untitled.dir/Pose3d.cpp.o	2512b477504fef08
-4	1663	1662950317833790774	CMakeFiles/untitled.dir/MathUtils.cpp.o	8521945d8cd50130
-5	1556	1662970715107198250	CMakeFiles/untitled.dir/main.cpp.o	79eeac053b631f2e
-5	2516	1662970716068074650	CMakeFiles/untitled.dir/RobotArm.cpp.o	742bbf8dbcc4b9a2
-2516	2620	1662970716184852108	untitled	4d11967d3d1329c2
 2	1567	1662971138684444824	CMakeFiles/untitled.dir/main.cpp.o	79eeac053b631f2e
-3	2685	1662971139791938924	CMakeFiles/untitled.dir/RobotArm.cpp.o	742bbf8dbcc4b9a2
 2685	2774	1662971139900376419	untitled	4d11967d3d1329c2
+2	202	1662486619689865589	CMakeFiles/untitled.dir/Point.cpp.o	adfb424eb9ef238d
+4	1663	1662950317833790774	CMakeFiles/untitled.dir/MathUtils.cpp.o	8521945d8cd50130
+3	70	1662950316248485513	CMakeFiles/untitled.dir/Pose3d.cpp.o	2512b477504fef08
+3	2685	1662971139791938924	CMakeFiles/untitled.dir/RobotArm.cpp.o	742bbf8dbcc4b9a2
