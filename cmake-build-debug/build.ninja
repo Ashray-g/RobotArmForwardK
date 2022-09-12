@@ -67,6 +67,13 @@ build CMakeFiles/untitled.dir/MathUtils.cpp.o: CXX_COMPILER__untitled_Debug /Use
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir
 
+build CMakeFiles/untitled.dir/RobotArm.cpp.o: CXX_COMPILER__untitled_Debug /Users/ashray/CLionProjects/untitled/RobotArm.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/RobotArm.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++14
+  INCLUDES = -isystem /usr/local/include/eigen3
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -75,7 +82,7 @@ build CMakeFiles/untitled.dir/MathUtils.cpp.o: CXX_COMPILER__untitled_Debug /Use
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/Pose3d.cpp.o CMakeFiles/untitled.dir/MathUtils.cpp.o
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/Pose3d.cpp.o CMakeFiles/untitled.dir/MathUtils.cpp.o CMakeFiles/untitled.dir/RobotArm.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
   OBJECT_DIR = CMakeFiles/untitled.dir
   POST_BUILD = :
