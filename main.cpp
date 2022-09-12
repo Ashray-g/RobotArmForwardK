@@ -2,6 +2,7 @@
 #include <Eigen/Dense>
 #include <vector>
 #include "MathUtils.h"
+#include "Pose3d.h"
 
 using namespace std;
 
@@ -32,15 +33,22 @@ int main() {
 
     MatrixXd mult = links[0];
 
+    vector<Pose3d> jointLocations;
+
     for(int i = 1;i<DHTable.size();i++){
         mult = mult * links[i];
-
-        cout << "Joint " << i << " location: \n" << "x: " << mult(0, 3) <<  "   y: " << mult(1, 3) << "   z: " << mult(2, 3) << "\n";
 
         MathUtils mathUtil;
         vector<double> rotation = mathUtil.rotationMatrixToEulerAngles(mult);
 
-        cout << rotation[0] << " " << rotation[1] << " " << rotation[2] << "\n\n";
+        jointLocations.push_back(*new Pose3d(mult(0, 3), mult(1, 3), mult(2, 3), rotation[0], rotation[1], rotation[2]));
+    }
+
+    int i = 0;
+    for(Pose3d pose : jointLocations){
+        i++;
+        cout << "Joint " << i << ": \n" << "POSE x: " << pose.getX() <<  "   y: " << pose.getY() << "   z: " << pose.getZ() << "\n";
+        cout << "ORIENTATION Around x: " << pose.getRotX() << " Around y: " << pose.getRotY() << " Around z: " << pose.getRotZ() << "\n\n";
     }
 
     return 0;
